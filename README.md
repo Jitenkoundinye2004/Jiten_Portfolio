@@ -123,7 +123,7 @@ For more details, visit the Projects section or check the GitHub repositories li
 Feel free to reach out for collaborations or opportunities!
 
 - **Email**: [jitenkoundinyecse@gmail.com]
-- **LinkedIn**: [[Your LinkedIn Profile](https://www.linkedin.com/in/jiten-koundinye-914048287/)]
+- **LinkedIn**: [[Your LinkedIn Profile](https://www.linkedin.com/in/jiten-koundinye-914048287/)](https://www.linkedin.com/in/jiten-koundinye-914048287/)
 - **GitHub**: [https://github.com/Jitenkoundinye2004](https://github.com/Jitenkoundinye2004)
 
 Built with ❤️ by Jiten Koundinye
