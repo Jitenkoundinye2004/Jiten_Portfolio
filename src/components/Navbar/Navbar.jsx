@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi'; 
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn,FaCode } from 'react-icons/fa';
+
+import { SiLeetcode } from 'react-icons/si';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
+  const menuRef = useRef(null);
 
-  useEffect(() => { 
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -15,6 +18,22 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   const handleMenuItemClick = (sectionId) => {
     setActiveSection(sectionId);
@@ -74,6 +93,14 @@ const Navbar = () => {
           >
             <FaLinkedinIn size={24} />
           </a>
+          <a
+            href="https://leetcode.com/u/Jitenkoundinye/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-[#8245ec]"
+          >
+            <SiLeetcode size={24} />
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -96,7 +123,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg">
+        <div ref={menuRef} className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg">
           <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
             {menuItems.map((item) => (
               <li
@@ -126,6 +153,14 @@ const Navbar = () => {
                 className="text-gray-300 hover:text-white"
               >
                 <FaLinkedinIn size={24} />
+              </a>
+              <a
+                href="https://leetcode.com/u/Jitenkoundinye/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white"
+              >
+                <SiLeetcode size={24} />
               </a>
             </div>
           </ul>

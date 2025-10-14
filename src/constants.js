@@ -26,6 +26,7 @@ import Render from "./assets/tech_logo/render.png"
 import interviewLogo from './assets/projectlogo/interviewlogo.png';
 import lungCancerLogo from './assets/projectlogo/lunglogo.png'
 import weatherApp from './assets/projectlogo/weather.png'
+import portfolio from './assets/projectlogo/portfolio.png'
 
 
 // Education Section Logo's
@@ -107,6 +108,23 @@ export const experiences = [
 export const projects = [
   {
     id: 0,
+    title: "Portfolio",
+    description:
+       "Developed a responsive and visually engaging personal portfolio website using React.js, Tailwind CSS, and Framer Motion to showcase my skills, projects, and experience. The site features smooth animations, an interactive user interface, and a downloadable resume option. Integrated EmailJS for contact form functionality without a backend and deployed the website on GitHub Pages with a custom domain. This project highlights my ability to build modern, scalable, and aesthetically appealing web applications with clean design and efficient performance.",
+    image: portfolio,
+    tags: [
+      "React.js",
+      "javascript",
+      "Tailwind CSS",
+      "EmailJS",
+      "HTML",
+      "git",
+    ],
+    github: "https://github.com/Jitenkoundinye2004/Jiten_Portfolio",
+    webapp: "/  ",
+  },
+  {
+    id: 1,
     title: "InterviewHelper.ai",
     description:
       "InterviewHelper.ai is an intelligent web application designed to help job seekers prepare for technical interviews using AI-powered guidance and insights. The platform provides personalized question suggestions, and topic-wise preparation analysis through a clean and responsive interface. As the lead developer, I implemented dynamic question generation, scoring logic, and an intuitive dashboard to enhance user experience. This project reflects my skills in MERN stack web development, AI integration, and creating scalable, user-centric solutions for real-world challenges.",
@@ -116,7 +134,7 @@ export const projects = [
     webapp: "https://interviewhelper-ai-frontend.onrender.com/",
   },
   {
-    id: 1,
+    id: 2,
     title: "Lung Cancer Detection System",
     description:
       "Engineered a VGG16 + ANN deep learning model to accurately classify lung cancer from CT scan images. Enhanced prediction accuracy by implementing K-Means segmentation for advanced feature extraction. Deployed a full-stack Flask web application integrated with MongoDB for secure user authentication and real-time cancer prediction, ensuring a seamless and responsive user experience.",
@@ -136,7 +154,7 @@ export const projects = [
     webapp: "/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Weather APP",
     description:
        "Developed a dynamic real-time Weather Forecasting Web Application using React.js and the OpenWeatherMap API. Implemented responsive UI with live temperature, humidity, and condition icons for multiple cities. Integrated .env configuration for secure API key management and optimized API calls to ensure efficient data retrieval. Enhanced user experience through error handling, clean design, and instant weather updates.",
