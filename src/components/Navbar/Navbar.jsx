@@ -38,6 +38,10 @@ const Navbar = () => {
   const handleMenuItemClick = (sectionId) => {
     setActiveSection(sectionId);
     setIsOpen(false);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const menuItems = [
@@ -128,6 +132,7 @@ const Navbar = () => {
             {menuItems.map((item) => (
               <li
                 key={item.id}
+                href={item.link}
                 className={`cursor-pointer hover:text-white ${
                   activeSection === item.id ? "text-[#8245ec]" : ""
                 }`}
