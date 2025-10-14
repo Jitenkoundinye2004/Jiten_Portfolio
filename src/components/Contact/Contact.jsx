@@ -5,22 +5,22 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const form = useRef();
-  const [isSent, setIsSent] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     emailjs
       .sendForm(
        "service_mwy1kac",
-        "template_m1d0r4e", 
+        "template_m1d0r4e",
         form.current,
-         "7HygQHzD-u7U-Qxhk"  
+         "7HygQHzD-u7U-Qxhk"
       )
       .then(
         () => {
-          setIsSent(true);
-          form.current.reset(); 
+          form.current.reset();
           toast.success("Message sent successfully! ✅", {
             position: "top-right",
             autoClose: 3000,
@@ -43,7 +43,10 @@ const Contact = () => {
             theme: "dark",
           });
         }
-      );
+      )
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -102,9 +105,10 @@ const Contact = () => {
           {/* Send Button */}
           <button
             type="submit"
-            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition"
+            disabled={isLoading}
+            className="w-full bg-gradient-to-r from-purple-600 to-pink-500 py-3 text-white font-semibold rounded-md hover:opacity-90 transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send
+            {isLoading ? "Sending..." : "Send"}
           </button>
         </form>
       </div>
