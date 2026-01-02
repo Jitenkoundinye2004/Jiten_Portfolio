@@ -110,7 +110,7 @@ export const projects = [
     id: 0,
     title: "Portfolio",
     description:
-       "Developed a responsive and visually engaging personal portfolio website using React.js, Tailwind CSS, and Framer Motion to showcase my skills, projects, and experience. The site features smooth animations, an interactive user interface, and a downloadable resume option. Integrated EmailJS for contact form functionality without a backend and deployed the website on GitHub Pages with a custom domain. This project highlights my ability to build modern, scalable, and aesthetically appealing web applications with clean design and efficient performance.",
+      "Developed a professional responsive personal portfolio website for Jiten Koundinye using React.js, Tailwind CSS, and Framer Motion. This developer portfolio showcases technical skills in the MERN stack and various engineering projects. The site features smooth Lenis scrolling, an interactive UI, and integrated EmailJS for direct contact. Designed as a modern digital resume, it highlights my expertise as a Computer Engineering student from MGM Nanded, focusing on scalable and aesthetically appealing web solutions.",
     image: portfolio,
     tags: [
       "React.js",
@@ -157,10 +157,10 @@ export const projects = [
     id: 3,
     title: "Weather APP",
     description:
-       "Developed a dynamic real-time Weather Forecasting Web Application using React.js and the OpenWeatherMap API. Implemented responsive UI with live temperature, humidity, and condition icons for multiple cities. Integrated .env configuration for secure API key management and optimized API calls to ensure efficient data retrieval. Enhanced user experience through error handling, clean design, and instant weather updates.",
+      "Developed a dynamic real-time Weather Forecasting Web Application using React.js and the OpenWeatherMap API. Implemented responsive UI with live temperature, humidity, and condition icons for multiple cities. Integrated .env configuration for secure API key management and optimized API calls to ensure efficient data retrieval. Enhanced user experience through error handling, clean design, and instant weather updates.",
     image: weatherApp,
     tags: [
-       "React.js",
+      "React.js",
       "JavaScript",
       "OpenWeather API",
       "REST API",
