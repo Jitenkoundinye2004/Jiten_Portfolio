@@ -27,6 +27,8 @@ import interviewLogo from './assets/projectlogo/interviewlogo.png';
 import lungCancerLogo from './assets/projectlogo/lunglogo.png'
 import weatherApp from './assets/projectlogo/weather.png'
 import portfolio from './assets/projectlogo/portfolio.png'
+import resumeBuilder from './assets/projectlogo/ResumeBuilder.png'
+import smartSeedingDSS from './assets/projectlogo/Smartseeding.png'
 
 
 // Education Section Logo's
@@ -172,7 +174,48 @@ export const projects = [
     webapp: "https://weather-app-61jj.vercel.app/",
   },
 
-
+  {
+  id: 4,
+  title: "Resume Builder Web Application",
+  description:
+    "Developed a Resume Builder Web Application that allows users to create professional resumes through an interactive and user-friendly interface. Implemented dynamic form inputs for personal details, education, skills, and experience, with real-time preview of the resume layout. Designed responsive UI for seamless usage across devices and ensured clean formatting for printable resumes. Focused on usability, structured data handling, and modern UI practices to help users generate job-ready resumes efficiently.",
+  image: resumeBuilder,
+  tags: [
+    "React.js",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Responsive Design",
+    "Form Handling",
+    "UI/UX Design"
+  ],
+  github: "https://github.com/Jitenkoundinye2004/Resume-Builder",
+  webapp: "https://resume-builder-frontend-3y6h.onrender.com/",
+},
+{
+  id: 5,
+  title: "Smart Seeding Decision Support System (AgriCare)",
+  description:
+    "Developed a full-stack agricultural web application called AgriCare (Smart Seeding DSS) to assist farmers with intelligent crop decisions and farm management. Built using a modern MERN stack (React + Node.js + Express + MongoDB) with a Python ML backend for advanced features such as AI-driven crop recommendations, text-to-speech accessibility, and image analysis. Implemented secure user authentication, smart seeding analysis, and multilingual support to enhance usability. Focused on seamless integration between frontend, backend, and machine learning components to provide a comprehensive, interactive smart agriculture tool.",
+  image: smartSeedingDSS,
+  tags: [
+    "React.js",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "MERN Stack",
+    "Python",
+    "Machine Learning",
+    "REST API",
+    "Text-to-Speech",
+    "Computer Vision"
+  ],
+  github: "https://github.com/Jitenkoundinye2004/Smart_seeding_DSS",
+  webapp: "https://smart-seeding-dss.onrender.com/"
+}
 ];
 
 export const education = [

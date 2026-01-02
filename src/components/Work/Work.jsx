@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { projects } from "../../constants.js";
 
 const Work = () => {
@@ -17,6 +17,17 @@ const Work = () => {
       handleCloseModal();
     }
   };
+
+  useEffect(() => {
+    if (selectedProject) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedProject]);
 
   return (
     <section
@@ -73,7 +84,11 @@ const Work = () => {
       {/* Modal Container */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4" onClick={handleBackdropClick}>
-          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl overflow-y-auto max-h-[80vh] relative" onClick={(e) => e.stopPropagation()}>
+          <div
+            data-lenis-prevent
+            className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl overflow-y-auto max-h-[80vh] relative"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex justify-end p-4">
               <button
                 onClick={handleCloseModal}
