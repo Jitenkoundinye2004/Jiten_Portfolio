@@ -133,7 +133,7 @@ export const projects = [
     image: interviewLogo,
     tags: ["React JS", "Node JS", "Express JS", "MongoDb", "API"],
     github: "https://github.com/Jitenkoundinye2004/InterviewHelper.ai",
-    webapp: "https://interviewhelper-ai-frontend.onrender.com/",
+    webapp: "https://interviewhelper-ai.onrender.com",
   },
   {
     id: 2,
