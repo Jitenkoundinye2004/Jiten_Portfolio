@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn,FaCode } from 'react-icons/fa';
 
 import { SiLeetcode } from 'react-icons/si';
 
-const Navbar = () => {
+const Navbar = ({ onDownloadResume }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,7 +64,7 @@ const Navbar = () => {
           <span className="text-[#8245ec]">&gt;</span>
         </div>
 
-        <ul className="md:flex space-x-8 text-gray-300 hidden">
+        <ul className="md:flex space-x-8 items-center text-gray-300 hidden">
           {menuItems.map((item) => (
             <li
               key={item.id}
@@ -77,6 +77,14 @@ const Navbar = () => {
               </button>
             </li>
           ))}
+          <li>
+            <button
+              onClick={onDownloadResume}
+              className="bg-gradient-to-r from-[#8245ec] to-[#a855f7] text-white py-1.5 px-4 rounded-full text-sm font-semibold transition duration-300 hover:opacity-90 transform hover:scale-105"
+            >
+              Download Resume
+            </button>
+          </li>
         </ul>
 
         {/* Social Icons */}
@@ -90,7 +98,7 @@ const Navbar = () => {
             <FaGithub size={24} />
           </a>
           <a
-            href="https://www.linkedin.com/in/jiten-koundinye-914048287/"
+            href="https://linkedin.com/in/jiten-koundinye"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-[#8245ec]"
@@ -142,6 +150,17 @@ const Navbar = () => {
                 </button>
               </li>
             ))}
+            <li>
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  onDownloadResume();
+                }}
+                className="bg-gradient-to-r from-[#8245ec] to-[#a855f7] text-white py-1.5 px-6 rounded-full text-sm font-semibold transition duration-300 hover:opacity-90"
+              >
+                Download Resume
+              </button>
+            </li>
             <div className="flex space-x-4">
               <a
                 href="https://github.com/Jitenkoundinye2004"
@@ -152,7 +171,7 @@ const Navbar = () => {
                 <FaGithub size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/jiten-koundinye-914048287/"
+                href="https://linkedin.com/in/jiten-koundinye"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"

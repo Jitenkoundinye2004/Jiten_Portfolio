@@ -16,3 +16,51 @@ html{
     clip-path:polygon(0 0, 100% 0,100% 98%,75% 95% ,0 100%);
   }
 }
+
+@media print {
+  body {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+  }
+  
+  /* Hide all main portfolio parts and gradients */
+  #root > div > div,
+  #root > div > nav,
+  #root > div > footer,
+  #root > div > section,
+  .no-print,
+  #print-controls {
+    display: none !important;
+  }
+  
+  #print-resume-area {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: white !important;
+    color: black !important;
+    visibility: visible !important;
+  }
+  
+  #print-resume-area * {
+    visibility: visible !important;
+    color: black !important;
+  }
+
+  @page {
+    size: letter;
+    margin: 0.5in 0.5in 0.5in 0.5in;
+  }
+  
+  .print-section {
+    page-break-inside: avoid;
+  }
+}

@@ -8,15 +8,27 @@ const StructuredData = () => {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Jiten Koundinye",
-            "url": "https://jiten-portfolio.pages.dev/",
-            "jobTitle": "Full Stack MERN Developer",
-            "worksFor": {
-                "@type": "Organization",
-                "name": "Zidio Development"
+            "url": "https://jiten-portfolio.vercel.app/",
+            "image": "https://jiten-portfolio.vercel.app/profile.png",
+            "jobTitle": [
+                "Software Developer",
+                "Java Developer",
+                "MERN Developer",
+                "Web Developer",
+                "Full Stack Developer"
+            ],
+            "description": "Software Developer, Java Developer, MERN Developer, Web Developer, and Full Stack Developer with 8 months of internship experience building full-stack applications, secure backends, and responsive UIs.",
+            "gender": "Male",
+            "nationality": "Indian",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Nanded",
+                "addressRegion": "Maharashtra",
+                "addressCountry": "India"
             },
             "alumniOf": {
                 "@type": "CollegeOrUniversity",
-                "name": "MGM's College of Engineering, Nanded",
+                "name": "MGM College of Engineering, Nanded",
                 "address": {
                     "@type": "PostalAddress",
                     "addressLocality": "Nanded",
@@ -24,12 +36,48 @@ const StructuredData = () => {
                     "addressCountry": "India"
                 }
             },
-            "description": "Full Stack Developer specializing in MERN stack (MongoDB, Express, React, Node.js), React.js, and AI integrated systems.",
-            "knowsAbout": ["React.js", "Node.js", "MongoDB", "Express.js", "MERN Stack", "AI", "Cloud Computing", "Computer Engineering"],
+            "worksFor": [
+                {
+                    "@type": "Organization",
+                    "name": "Softcadd Technologies",
+                    "sameAs": "https://softcadd.com"
+                },
+                {
+                    "@type": "Organization",
+                    "name": "Zidio Development",
+                    "sameAs": "https://zidio.in"
+                }
+            ],
+            "knowsAbout": [
+                "Software Development",
+                "Java Development",
+                "MERN Stack Development",
+                "Web Development",
+                "Full Stack Development",
+                "React.js",
+                "Node.js",
+                "Express.js",
+                "MongoDB",
+                "Java",
+                "TypeScript",
+                "Docker",
+                "AWS",
+                "CI/CD pipelines",
+                "RESTful APIs",
+                "JWT Authentication & RBAC",
+                "MySQL (CRUD, joins)",
+                "Jest",
+                "React Testing Library",
+                "Agile / Scrum"
+            ],
             "sameAs": [
                 "https://github.com/Jitenkoundinye2004",
                 "https://linkedin.com/in/jiten-koundinye"
-            ]
+            ],
+            "mainEntityOfPage": {
+                "@type": "ProfilePage",
+                "@id": "https://jiten-portfolio.vercel.app/#about"
+            }
         };
         script.innerHTML = JSON.stringify(data);
         document.head.appendChild(script);

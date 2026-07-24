@@ -29,12 +29,18 @@ const Experience = () => {
             }`}
           >
             {/* Timeline Circle */}
-            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
-              <img
-                src={experience.img}
-                alt={experience.company}
-                className="w-full h-full object-cover rounded-full"
-              />
+            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-gray-900 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10 overflow-hidden shadow-lg">
+              {experience.img ? (
+                <img
+                  src={experience.img}
+                  alt={experience.company}
+                  className="w-full h-full object-cover rounded-full"
+                />
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-purple-600 to-indigo-800 flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                  {experience.company.substring(0, 2).toUpperCase()}
+                </div>
+              )}
             </div>
 
             {/* Content Section */}
@@ -46,12 +52,18 @@ const Experience = () => {
               {/* Flex container for image and text */}
               <div className="flex items-center space-x-6">
                 {/* Company Logo/Image */}
-                <div className="w-16 h-16 bg-white rounded-md overflow-hidden">
-                  <img
-                    src={experience.img}
-                    alt={experience.company}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-16 h-16 bg-gray-900 border border-gray-700 rounded-md overflow-hidden flex items-center justify-center">
+                  {experience.img ? (
+                    <img
+                      src={experience.img}
+                      alt={experience.company}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-purple-600 to-indigo-800 flex items-center justify-center text-white font-bold text-lg">
+                      {experience.company.substring(0, 2).toUpperCase()}
+                    </div>
+                  )}
                 </div>
 
                 {/* Role, Company Name, and Date */}
@@ -69,7 +81,15 @@ const Experience = () => {
                 </div>
               </div>
 
-              <p className="mt-4 text-gray-400">{experience.desc}</p>
+              {Array.isArray(experience.desc) ? (
+                <ul className="mt-4 text-gray-400 list-disc list-outside pl-5 space-y-2 text-sm sm:text-base">
+                  {experience.desc.map((bullet, idx) => (
+                    <li key={idx}>{bullet}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-4 text-gray-400">{experience.desc}</p>
+              )}
               <div className="mt-4">
                 <h5 className="font-medium text-white">Skills:</h5>
                 <ul className="flex flex-wrap mt-2">

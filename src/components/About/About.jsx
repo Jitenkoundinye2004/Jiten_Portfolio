@@ -2,7 +2,7 @@ import React from 'react'
 import TypingEffect from '../TypingEffect'
 import Tilt from 'react-parallax-tilt'
 import profileImage from "../../assets/profile.png"
-const About = () => {
+const About = ({ onDownloadResume }) => {
   return (
     <section id="about"
       className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
@@ -12,14 +12,14 @@ const About = () => {
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
         
         {/* Greeting */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-2 leading-tight">
+          <p className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-2 leading-tight">
             Hi, I am
-          </h1>
+          </p>
 
            {/* Name */}
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
             Jiten Koundinye
-          </h2>
+          </h1>
 
           {/* Skills heading */}
           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 text-[#8245ec] leading-tight">
@@ -29,11 +29,11 @@ const About = () => {
             </span>
             <TypingEffect
             texts={[
-              ' Full Stack Developer',
-              ' Mern Stack Developer',
-              ' Frontend Developer',
-              ' Backend Developer'
-
+              ' Software Developer',
+              ' Java Developer',
+              ' MERN Developer',
+              ' Web Developer',
+              ' Full Stack Developer'
             ]}
             speed={100}
             eraseSpeed={50}
@@ -44,18 +44,21 @@ const About = () => {
             
           </h3>
           {/* about me paragraph */}
-          <p className='text-baase sm:text-lg text-gray-400 mb-10 mt-8 leading-relaxed'>
-            I am an aspiring full stack developer with a strong passion for building modern and scalable web applications. Skilled in front-end and back-end development, I have hands-on experience with the MERN stack and other emerging technologies. As a fresher, I am eager to apply my technical knowledge, learn continuously, and contribute to creating seamless user experiences and efficient digital solutions.
-
+          <p className='text-base sm:text-lg text-gray-400 mb-10 mt-8 leading-relaxed'>
+            I am a Software Developer, Java Developer, MERN Developer, Web Developer, and Full Stack Developer with 8 months of internship experience building 15+ full-stack features and 20+ REST APIs using React.js, Node.js, Express.js, MongoDB, Java, TypeScript, Docker, and AWS. I focus on creating reusable UI components, secure JWT/RBAC backends, and stable, high-performance web applications.
           </p>
 
           {/* Resume Button */}
-          <a href="https://drive.google.com/file/d/1Dm4DQkW634Z7A-xps6RvMQB9F4cftDH4/view?usp=sharing" target='_blank' rel='noopner noreferrer' className='inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105' style={{
-            background:'linear-gradient(90deg,#8245ec,#a855f7)',
-            boxShadow:'0 0 2px #8245ec, 0 0 20px #8245ec, 0 0 40px #8245ec '
-          }}>
-            Download CV
-          </a>
+          <button 
+            onClick={onDownloadResume} 
+            className='inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105 cursor-pointer' 
+            style={{
+              background:'linear-gradient(90deg,#8245ec,#a855f7)',
+              boxShadow:'0 0 2px #8245ec, 0 0 20px #8245ec, 0 0 40px #8245ec'
+            }}
+          >
+            Download Resume
+          </button>
         </div>
 
         {/* Right Side */}

@@ -110,9 +110,17 @@ const Work = () => {
                 <h3 className="lg:text-3xl font-bold text-white mb-4 text-md">
                   {selectedProject.title}
                 </h3>
-                <p className="text-gray-400 mb-6 lg:text-base text-xs">
-                  {selectedProject.description}
-                </p>
+                {selectedProject.bullets ? (
+                  <ul className="text-gray-400 mb-6 lg:text-base text-sm list-disc list-outside pl-5 space-y-2">
+                    {selectedProject.bullets.map((bullet, idx) => (
+                      <li key={idx}>{bullet}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="text-gray-400 mb-6 lg:text-base text-xs">
+                    {selectedProject.description}
+                  </p>
+                )}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedProject.tags.map((tag, index) => (
                     <span
