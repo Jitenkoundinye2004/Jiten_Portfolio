@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn,FaCode } from 'react-icons/fa';
 
 import { SiLeetcode } from 'react-icons/si';
 
-const Navbar = ({ onDownloadResume }) => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,7 +64,7 @@ const Navbar = ({ onDownloadResume }) => {
           <span className="text-[#8245ec]">&gt;</span>
         </div>
 
-        <ul className="md:flex space-x-8 items-center text-gray-300 hidden">
+        <ul className="md:flex space-x-8 text-gray-300 hidden">
           {menuItems.map((item) => (
             <li
               key={item.id}
@@ -77,14 +77,6 @@ const Navbar = ({ onDownloadResume }) => {
               </button>
             </li>
           ))}
-          <li>
-            <button
-              onClick={onDownloadResume}
-              className="bg-gradient-to-r from-[#8245ec] to-[#a855f7] text-white py-1.5 px-4 rounded-full text-sm font-semibold transition duration-300 hover:opacity-90 transform hover:scale-105"
-            >
-              Download Resume
-            </button>
-          </li>
         </ul>
 
         {/* Social Icons */}
@@ -150,17 +142,6 @@ const Navbar = ({ onDownloadResume }) => {
                 </button>
               </li>
             ))}
-            <li>
-              <button
-                onClick={() => {
-                  setIsOpen(false);
-                  onDownloadResume();
-                }}
-                className="bg-gradient-to-r from-[#8245ec] to-[#a855f7] text-white py-1.5 px-6 rounded-full text-sm font-semibold transition duration-300 hover:opacity-90"
-              >
-                Download Resume
-              </button>
-            </li>
             <div className="flex space-x-4">
               <a
                 href="https://github.com/Jitenkoundinye2004"

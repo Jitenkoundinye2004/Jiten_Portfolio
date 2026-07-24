@@ -2,7 +2,7 @@ import React from 'react'
 import TypingEffect from '../TypingEffect'
 import Tilt from 'react-parallax-tilt'
 import profileImage from "../../assets/profile.png"
-const About = ({ onDownloadResume }) => {
+const About = () => {
   return (
     <section id="about"
       className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
@@ -49,16 +49,18 @@ const About = ({ onDownloadResume }) => {
           </p>
 
           {/* Resume Button */}
-          <button 
-            onClick={onDownloadResume} 
-            className='inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105 cursor-pointer' 
+          <a 
+            href="https://drive.google.com/file/d/1Dm4DQkW634Z7A-xps6RvMQB9F4cftDH4/view?usp=sharing" 
+            target='_blank' 
+            rel='noopener noreferrer' 
+            className='inline-block text-white py-3 px-8 rounded-full mt-5 text-lg font-bold transition duration-300 transform hover:scale-105 cursor-pointer text-center' 
             style={{
               background:'linear-gradient(90deg,#8245ec,#a855f7)',
               boxShadow:'0 0 2px #8245ec, 0 0 20px #8245ec, 0 0 40px #8245ec'
             }}
           >
             Download Resume
-          </button>
+          </a>
         </div>
 
         {/* Right Side */}
