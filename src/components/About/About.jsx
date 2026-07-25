@@ -72,7 +72,7 @@ const About = () => {
         perspective={1000}
         scale={1.05}
         transitionSpeed={1000}
-        gyroscope={true}
+        gyroscope={false}
 
         >   
              <img src={profileImage} alt="Jiten Koundinye" className='w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]'/>

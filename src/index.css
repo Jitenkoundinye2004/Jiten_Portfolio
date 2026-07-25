@@ -17,6 +17,10 @@ html{
   }
 }
 
+.animate-blob {
+  will-change: transform;
+}
+
 @media print {
   body {
     background-color: #ffffff !important;
