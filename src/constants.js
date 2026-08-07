@@ -156,8 +156,8 @@ export const projects = [
     ],
     image: meshLogo,
     tags: ["Node.js", "Express", "React.js", "TypeScript", "SQLite", "Tailwind CSS", "Cryptography", "RSA/AES-GCM"],
-    github: "/",
-    webapp: "/",
+    github: "https://github.com/Jitenkoundinye2004/Offline-Mesh-Payment-Protocol",
+    webapp: "https://offline-mesh-payment-protocol.vercel.app/",
   },
   {
     id: 0,
