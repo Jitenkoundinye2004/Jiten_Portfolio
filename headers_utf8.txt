@@ -1,0 +1,19 @@
+﻿
+Key                         Value                                       
+---                         -----                                       
+Access-Control-Allow-Origin *                                           
+Age                         3539                                        
+Content-Disposition         inline; filename="sitemap.xml"              
+Strict-Transport-Security   max-age=63072000; includeSubDomains; preload
+X-Vercel-Cache              HIT                                         
+X-Vercel-Id                 bom1::mhqqz-1784995339771-f6e3dc486b34      
+Accept-Ranges               bytes                                       
+Content-Length              278                                         
+Cache-Control               public, max-age=0, must-revalidate          
+Content-Type                application/xml                             
+Date                        Sat, 25 Jul 2026 16:02:20 GMT               
+ETag                        "12b8c2c8f78b841498f0b630e3d41f7e"          
+Last-Modified               Sat, 25 Jul 2026 15:03:20 GMT               
+Server                      Vercel                                      
+
+

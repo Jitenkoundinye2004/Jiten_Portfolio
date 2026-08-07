@@ -29,6 +29,7 @@ import weatherApp from './assets/projectlogo/weather.png';
 import portfolio from './assets/projectlogo/portfolio.png';
 import resumeBuilder from './assets/projectlogo/ResumeBuilder.png';
 import smartSeedingDSS from './assets/projectlogo/Smartseeding.png';
+import meshLogo from './assets/projectlogo/offline-mesh.png';
 
 // Education Section Logo's
 import mgmLogo from './assets/edu_logo/MGM.png';
@@ -143,6 +144,21 @@ export const experiences = [
 ];
 
 export const projects = [
+  {
+    id: 6,
+    title: "Offline Mesh Payment Protocol",
+    description: "Designed and engineered a cryptographic proof-of-concept for an offline peer-to-peer payment protocol. This project tackles the complex challenge of sending money in areas with zero internet connectivity (e.g., basements, flights, rural areas) by simulating a mesh network where encrypted transaction packets \"gossip\" from device to device via Bluetooth/Wi-Fi Direct until they reach a node with 4G access.",
+    bullets: [
+      "Engineered a secure payload pipeline using AES-256-GCM for packet encryption and RSA-2048 for key encapsulation to ensure intermediary devices cannot read or tamper with transaction amounts.",
+      "Solved the 'duplicate-storm' problem by implementing an atomic SHA-256 hashing cache layer, guaranteeing exact-once execution and preventing double-spending.",
+      "Built strict cryptographic freshness checks using UUID nonces and signedAt timestamps to automatically reject delayed or replayed packets.",
+      "Developed an interactive frontend using React and Framer Motion to visualize complex routing, inject packets, run gossip rounds, and synchronize the mesh network with an SQLite ledger in real-time."
+    ],
+    image: meshLogo,
+    tags: ["Node.js", "Express", "React.js", "TypeScript", "SQLite", "Tailwind CSS", "Cryptography", "RSA/AES-GCM"],
+    github: "/",
+    webapp: "/",
+  },
   {
     id: 0,
     title: "Interview Helper AI",
