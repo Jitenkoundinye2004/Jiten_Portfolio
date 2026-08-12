@@ -29,7 +29,8 @@ import weatherApp from './assets/projectlogo/weather.png';
 import portfolio from './assets/projectlogo/portfolio.png';
 import resumeBuilder from './assets/projectlogo/ResumeBuilder.png';
 import smartSeedingDSS from './assets/projectlogo/Smartseeding.png';
-import meshLogo from './assets/projectlogo/offline-mesh.png';
+import meshLogo from './assets/projectlogo/upi.png';
+import dpiLogo from './assets/projectlogo/dpi.png';
 
 // Education Section Logo's
 import mgmLogo from './assets/edu_logo/MGM.png';
@@ -146,18 +147,31 @@ export const experiences = [
 export const projects = [
   {
     id: 6,
-    title: "Offline Mesh Payment Protocol",
-    description: "Designed and engineered a cryptographic proof-of-concept for an offline peer-to-peer payment protocol. This project tackles the complex challenge of sending money in areas with zero internet connectivity (e.g., basements, flights, rural areas) by simulating a mesh network where encrypted transaction packets \"gossip\" from device to device via Bluetooth/Wi-Fi Direct until they reach a node with 4G access.",
+    title: "UPI Without Internet (Live Web Simulation)",
+    description: "Engineered a decentralized offline peer-to-peer payment routing protocol capable of securely transferring funds across untrusted intermediaries with 0% data leakage.",
     bullets: [
-      "Engineered a secure payload pipeline using AES-256-GCM for packet encryption and RSA-2048 for key encapsulation to ensure intermediary devices cannot read or tamper with transaction amounts.",
-      "Solved the 'duplicate-storm' problem by implementing an atomic SHA-256 hashing cache layer, guaranteeing exact-once execution and preventing double-spending.",
-      "Built strict cryptographic freshness checks using UUID nonces and signedAt timestamps to automatically reject delayed or replayed packets.",
-      "Developed an interactive frontend using React and Framer Motion to visualize complex routing, inject packets, run gossip rounds, and synchronize the mesh network with an SQLite ledger in real-time."
+      "Engineered a decentralized offline peer-to-peer payment routing protocol capable of securely transferring funds across untrusted intermediaries with 0% data leakage by implementing a strict Hybrid Cryptography pipeline utilizing AES-256-GCM and RSA-2048 key encapsulation.",
+      "Eliminated double-spending and duplicate transaction processing, achieving exact-once settlement guarantees for concurrent network uploads by engineering an atomic idempotency cache utilizing SHA-256 hashing on incoming ciphertext payloads.",
+      "Prevented malicious replay attacks on the central ledger, automatically dropping 100% of expired or intercepted packets before decryption by embedding strict cryptographic freshness checks (UUID nonces and 24-hour TTLs) directly into the encrypted payload structure."
     ],
     image: meshLogo,
     tags: ["Node.js", "Express", "React.js", "TypeScript", "SQLite", "Tailwind CSS", "Cryptography", "RSA/AES-GCM"],
-    github: "https://github.com/Jitenkoundinye2004/Offline-Mesh-Payment-Protocol",
+    github: "https://github.com/Jitenkoundinye2004/UPI-Without-Internet",
     webapp: "https://offline-mesh-payment-protocol.vercel.app/",
+  },
+  {
+    id: 7,
+    title: "Deep Packet Inspection Platform",
+    description: "Engineered a Deep Packet Inspection engine to parse Ethernet, IPv4, TCP/UDP packets from PCAP files and track network connections using five-tuple flow identification.",
+    bullets: [
+      "Engineered a Deep Packet Inspection engine to parse Ethernet, IPv4, TCP/UDP packets from PCAP files and track network connections using five-tuple flow identification.",
+      "Implemented TLS SNI/HTTP Host extraction, application classification, and rule-based traffic filtering to identify and analyze network traffic without decrypting encrypted payloads.",
+      "Architected concurrent packet processing using Node.js Worker Threads and flow-affine workload distribution, enabling parallel analysis while preserving per-flow state consistency."
+    ],
+    image: dpiLogo,
+    tags: ["React.js", "Node.js", "Express.js", "JavaScript", "MongoDB", "PCAP", "TCP/IP", "Docker"],
+    github: "https://github.com/Jitenkoundinye2004/Deep-Packet-Inspection",
+    webapp: "https://deep-packet-inspection-five.vercel.app/",
   },
   {
     id: 0,
