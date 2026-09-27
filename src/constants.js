@@ -31,6 +31,9 @@ import resumeBuilder from './assets/projectlogo/ResumeBuilder.png';
 import smartSeedingDSS from './assets/projectlogo/Smartseeding.png';
 import meshLogo from './assets/projectlogo/upi.png';
 import dpiLogo from './assets/projectlogo/dpi.png';
+import vintageCafeLogo from './assets/projectlogo/vintage-cafe.png';
+import gymLogo from './assets/projectlogo/gym.png';
+import madhurBhojLogo from './assets/projectlogo/madhurbhoj.png';
 
 // Education Section Logo's
 import mgmLogo from './assets/edu_logo/MGM.png';
@@ -268,6 +271,48 @@ export const projects = [
     ],
     github: "https://github.com/Jitenkoundinye2004/Jiten_Portfolio",
     webapp: "/",
+  },
+  {
+    id: 8,
+    title: "Vintage Coffee Co.",
+    description: "A modern React-based website for Vintage Coffee Co. in Nanded, featuring a responsive UI, JSON-LD Schema structured data for local SEO, and elegant typography to showcase their cafe menu and ambience.",
+    bullets: [
+      "Built a highly responsive and visually appealing user interface using React and Tailwind CSS.",
+      "Implemented advanced SEO practices including JSON-LD schema for local businesses to improve Google search visibility.",
+      "Optimized assets and web fonts (Playfair Display & Plus Jakarta Sans) for fast loading speeds and premium aesthetics."
+    ],
+    image: vintageCafeLogo,
+    tags: ["React.js", "Tailwind CSS", "Vite", "SEO", "JSON-LD"],
+    github: "/",
+    webapp: "https://vintage-cafe-beta.vercel.app/",
+  },
+  {
+    id: 9,
+    title: "UN FITNESS CLUB",
+    description: "Premium gym and fitness center website built with React and Tailwind CSS. Features highly optimized SEO tags, a sleek dark-themed UI, and fluid animations to showcase facilities, trainers, and memberships.",
+    bullets: [
+      "Engineered a high-performance dark-themed UI using Tailwind CSS with custom animations and interactive components.",
+      "Optimized meta tags and Open Graph properties for comprehensive social sharing and search engine indexing.",
+      "Designed a responsive layout ensuring a seamless browsing experience across mobile, tablet, and desktop devices."
+    ],
+    image: gymLogo,
+    tags: ["React.js", "Tailwind CSS", "Vite", "UI/UX", "SEO"],
+    github: "/",
+    webapp: "https://gym-orpin-five.vercel.app/",
+  },
+  {
+    id: 10,
+    title: "Madhur Bhoj Thali",
+    description: "A beautifully crafted authentic Rajasthani restaurant website built with React, structured with elegant typography and smooth scrolling for a premium user dining and online ordering experience.",
+    bullets: [
+      "Developed a custom design system focusing on Indian aesthetics utilizing Cinzel and Marcellus typography.",
+      "Integrated modern smooth-scrolling navigation and dynamic component rendering for an immersive user journey.",
+      "Structured semantic HTML and meta descriptions to drive local search traffic and highlight authentic dining offerings."
+    ],
+    image: madhurBhojLogo,
+    tags: ["React.js", "Tailwind CSS", "Vite", "Web Design"],
+    github: "/",
+    webapp: "https://madhurbhoj.vercel.app/",
   }
 ];
 
