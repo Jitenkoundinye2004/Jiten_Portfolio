@@ -1,7 +1,7 @@
 import React from 'react'
 import TypingEffect from '../TypingEffect'
 import Tilt from 'react-parallax-tilt'
-import profileImage from "../../assets/profile.png"
+import profileImage from "../../assets/profile.jpeg"
 const About = () => {
   return (
     <section id="about"
